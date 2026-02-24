@@ -3,7 +3,6 @@ import os
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
-# Load .env variables
 load_dotenv()
 
 client = AzureOpenAI(
@@ -12,7 +11,6 @@ client = AzureOpenAI(
     api_key=os.getenv("AZURE_OPENAI_API_KEY")
 )
 
-# --- Streamlit UI ---
 st.set_page_config(page_title="Azure OpenAI POC", page_icon="🤖", layout="centered")
 st.title("🤖 Azure OpenAI POC with Streamlit")
 
